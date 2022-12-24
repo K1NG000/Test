@@ -1,0 +1,7 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1NG000/Test/main/AutoChain",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1NG000/Test/main/AutoAbility",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1NG000/Test/main/Candy%20Farm",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1NG000/Test/main/Window%20Focus",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1NG000/Test/main/Free%20Cam",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1NG000/Test/main/To%20skip%20press%20E",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K1NG000/Test/main/Auto%20Sell%20Farms",true))()
