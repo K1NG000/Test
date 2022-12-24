@@ -3,7 +3,7 @@
 -- Freecam
 -- Cinematic free camera for spectating and video production.
 ------------------------------------------------------------------------
-
+spawn(function()
 local pi    = math.pi
 local abs   = math.abs
 local clamp = math.clamp
@@ -490,3 +490,4 @@ do
 
 	ContextActionService:BindActionAtPriority("FreecamToggle", HandleActivationInput, false, TOGGLE_INPUT_PRIORITY, FREECAM_MACRO_KB[#FREECAM_MACRO_KB])
 end
+end)
