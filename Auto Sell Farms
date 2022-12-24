@@ -1,3 +1,4 @@
+spawn(function()
 local suc, err = pcall(function()
 local lPlayer = game.Players.LocalPlayer
 local pGui = lPlayer.PlayerGui
@@ -22,3 +23,4 @@ waveF:GetPropertyChangedSignal("Text"):Connect(function()
 end)
 end)
 if not suc then print(err) end
+end)
