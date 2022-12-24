@@ -1,3 +1,4 @@
+spawn(function()
 getgenv().IntegrateAutoStrats = true -- enabling this will integrate this script with the output and camera of MM's AutoStrats (If you don't use AutoStrats and leave it as true it will still run normally)
 
 --// Do not edit anything below this point \\--
@@ -49,4 +50,5 @@ task.spawn(function()
             end
         end
     end
+end)
 end)
