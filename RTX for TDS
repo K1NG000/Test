@@ -29,26 +29,26 @@ local config = {
 
 -- settings {
 
-color.Enabled = false
+color.Enabled = true
 color.Contrast = 0.15
 color.Brightness = 0.1
 color.Saturation = 0.25
 color.TintColor = Color3.fromRGB(255, 222, 211)
 
-bloom.Enabled = false
+bloom.Enabled = true
 bloom.Intensity = 0.1
 
-sun.Enabled = false
+sun.Enabled = true
 sun.Intensity = 0.2
 sun.Spread = 1
 
-bloom.Enabled = false
+bloom.Enabled = true
 bloom.Intensity = 0.05
 bloom.Size = 32
 bloom.Threshold = 1
 
-blur.Enabled = false
-blur.Size = 6
+blur.Enabled = true
+blur.Size = 2
 
 -- settings }
 
