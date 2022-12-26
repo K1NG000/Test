@@ -1,0 +1,1 @@
+if game.PlaceId~=5591597781 then return end;while wait() do pcall(function() for i,v in next,workspace:GetChildren() do c=game.Players.LocalPlayer.Character if v.Name=="CandyCane" and v.Position.Y<200 then c.HumanoidRootPart.Anchored=false c:MoveTo(v.Position) end end end) end
