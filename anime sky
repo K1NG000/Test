@@ -1,0 +1,27 @@
+getgenv().ParanormalLighting = true
+
+game:GetService("RunService").Heartbeat:Connect(
+function()
+    if getgenv().ParanormalLighting then
+Sky = game.Lighting.Sky
+
+Sky.SkyboxBk = "http://www.roblox.com/asset/?id=4949649813"
+Sky.SkyboxDn = "http://www.roblox.com/asset/?id=4949649813"
+Sky.SkyboxFt = "http://www.roblox.com/asset/?id=4949649813"
+Sky.SkyboxLf = "http://www.roblox.com/asset/?id=4949649813"
+Sky.SkyboxRt = "http://www.roblox.com/asset/?id=4949649813"
+Sky.SkyboxUp = "http://www.roblox.com/asset/?id=4949649813"
+
+Time = game.Lighting
+
+Time.TimeOfDay = "11:30:12"
+
+Fog = game.Lighting.FogEnd
+
+Fog = 10000
+
+Shadows = game.Lighting.GlobalShadows
+
+Shadows = false
+end
+end)
