@@ -68,6 +68,12 @@ maintab:Toggle('AutoSkip', function(bool)
 end)
 
 
+maintab:Button('Skip (E)', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/L00PGBob/Tower-Defense-Simulator-3/main/To%20skip%20press%20E",true))()
+end)
+
+
+
 maintab:Button('Auto Stack V3', function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/L00PGBob/Test/main/Auto%20Stack",true))()
 end)
