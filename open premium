@@ -1,0 +1,2 @@
+local args = {[1] = "Inventory",[2] = "Open",[3] = "Crate",[4] = "Premium"}
+game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
