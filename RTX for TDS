@@ -29,7 +29,7 @@ local config = {
 
 -- settings {
 
-color.Enabled = true
+color.Enabled = false
 color.Contrast = 0.15
 color.Brightness = 0.1
 color.Saturation = 0.25
@@ -48,7 +48,7 @@ bloom.Size = 32
 bloom.Threshold = 1
 
 blur.Enabled = true
-blur.Size = 2
+blur.Size = 6
 
 -- settings }
 
