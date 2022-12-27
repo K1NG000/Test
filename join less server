@@ -1,10 +1,10 @@
 print("Original From: https://v3rmillion.net/showthread.php?tid=1127661\nCreddit To: Aidez")
 repeat wait() until game:IsLoaded()
-if game.PlaceId == 3260590327 and #game:GetService("Players"):GetChildren() >= 14 then --If server has over 14 then it will teleport you to the less player server
+if game.PlaceId == 3260590327 and #game:GetService("Players"):GetChildren() >= 3 then --If server has over 14 then it will teleport you to the less player server
     local HttpService = game:GetService("HttpService")
     local function GetServers(placeid)
         local Servers = {}
-        local MaxPlayers = 3 --Max player
+        local MaxPlayers = 16 --Max player
         local CurrentCursor = ""
         if placeid == nil then
             placeid = game.PlaceId
