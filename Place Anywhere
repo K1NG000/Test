@@ -1,0 +1,72 @@
+stepstart = false
+local va = nil
+local event = game.ReplicatedStorage.RemoteFunction
+local library = loadstring(game:HttpGet("https://banbus.cf/Scripts/Library", true))()
+local w = library:CreateWindow('Place Anywhere')
+local Toggle = w:Button('Start', function()
+local nextTower = nil
+stepstart = true
+va.Text = 'Step 1'
+end)
+local troops = {}
+for i,v in next, game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer("Session", "Search", "Inventory.Troops") do
+    if v.Equipped then
+        table.insert(troops, i)
+    end
+end
+w:Button('Upgrade All', function()
+for i,v in pairs(game.Workspace.Towers:GetChildren()) do
+    if v:WaitForChild("Owner").Value == game.Players.LocalPlayer then
+        event:InvokeServer("Troops","Upgrade","Set",{["Troop"] = v})
+        wait()
+    end
+end
+end)
+w:Section("Select Tower")
+w:Dropdown("Set Tower", {
+    location = _G;
+    flag = "troops";
+    list = troops;
+}, function(value)
+    nextTower = value
+end)
+w:Section('DANGER ZONE')
+w:Button('Sell All', function()
+    for i,v in pairs(game.Workspace.Towers:GetChildren()) do
+        if v:WaitForChild("Owner").Value == game.Players.LocalPlayer then
+            event:InvokeServer("Troops","Sell",{["Troop"] = v})
+            wait()
+        end
+    end
+end)
+w:Section('Step 0')
+  for i, v in pairs(game.CoreGui:GetDescendants()) do
+    if v:IsA("TextLabel") and v.Text == "Step 0" then
+        va = v
+    end
+  end
+step = 1
+local Mouse = game.Players.LocalPlayer:GetMouse()
+function valid(troop)
+    return true --Find a way to make sure the plr owns troop
+end
+spawn(function()
+	conn = Mouse.Button1Down:connect(function()
+	    if stepstart then
+		if step == 1 then
+			loc1 = Mouse.Hit.p
+			step = 2
+			va.Text = 'Step 2'
+		elseif step == 2 then
+		    if valid(nextTower) then
+			loc2 = Mouse.Hit.p
+			local roz = loc2-loc1
+            event:InvokeServer("Troops","Place",nextTower,{["Rotation"] = CFrame.new(roz.X,loc2.Y,roz.Z),["Position"] = loc1})
+            stepstart = false
+            va.Text = 'Step 0'
+            step = 1
+            end
+		end
+    end
+	end)
+end)	
