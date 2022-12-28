@@ -3,7 +3,7 @@ getgenv().buyCrate = true
 
 function buyCrate(crateType)
   spawn(function()
-        local args = {[1] = "Shop",[2] = "DailyPurchase",[3] = "Crate",[4] = crateType}
+        local args = {[1] = "Shop",[2] = "Purchase",[3] = "Crate",[4] = crateType}
         game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
     end)
 end
